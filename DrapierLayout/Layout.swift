@@ -23,215 +23,205 @@
 // THE SOFTWARE.
 //
 
-import UIKit
+public let maximumLayoutValue = CGFloat(10_000.0)
 
-let maximumLayoutValue = CGFloat(10_000.0)
-
-extension CGSize {
-    func rect() -> CGRect {
-        return CGRect(origin: CGPointZero, size: self)
+public extension CGSize {
+    public func rect() -> CGRect {
+        return CGRect(origin: CGPoint.zeroPoint, size: self)
     }
     
-    static func fixedWidth(width: CGFloat) -> CGSize {
+    public static func fixedWidth(width: CGFloat) -> CGSize {
         return CGSize(width: width, height: maximumLayoutValue)
     }
     
-    static func fixedHeight(height: CGFloat) -> CGSize {
+    public static func fixedHeight(height: CGFloat) -> CGSize {
         return CGSize(width: maximumLayoutValue, height: height)
     }
     
-    static var maximum: CGSize {
+    public static var maximum: CGSize {
         return CGSize(width: maximumLayoutValue, height: maximumLayoutValue)
     }
 }
 
-extension CGRect {
-    var top: CGFloat {
+public extension CGRect {
+    public var top: CGFloat {
         return CGRectGetMinY(self)
     }
     
-    func top(margins: UIEdgeInsets) -> CGFloat {
+    public func top(margins: UIEdgeInsets) -> CGFloat {
         return CGRectGetMinY(self) + margins.top
     }
     
-    var left: CGFloat {
+    public var left: CGFloat {
         return CGRectGetMinX(self)
     }
     
-    func left(margins: UIEdgeInsets) -> CGFloat {
+    public func left(margins: UIEdgeInsets) -> CGFloat {
         return CGRectGetMinX(self) + margins.left
     }
     
-    var bottom: CGFloat {
+    public var bottom: CGFloat {
         return CGRectGetMaxY(self)
     }
     
-    func bottom(margins: UIEdgeInsets) -> CGFloat {
+    public func bottom(margins: UIEdgeInsets) -> CGFloat {
         return CGRectGetMaxY(self) - margins.bottom
     }
     
-    var right: CGFloat {
+    public var right: CGFloat {
         return CGRectGetMaxX(self)
     }
     
-    func right(margins: UIEdgeInsets) -> CGFloat {
+    public func right(margins: UIEdgeInsets) -> CGFloat {
         return CGRectGetMaxX(self) - margins.right
     }
     
-    var centerY: CGFloat {
+    public var centerY: CGFloat {
         return CGRectGetMidY(self)
     }
 
-    func centerY(margins: UIEdgeInsets) -> CGFloat {
+    public func centerY(margins: UIEdgeInsets) -> CGFloat {
         return CGRectGetMinY(self) + margins.top + ((CGRectGetHeight(self) - margins.top - margins.bottom) / 2.0)
     }
     
-    var centerX: CGFloat {
+    public var centerX: CGFloat {
         return CGRectGetMidX(self)
     }
     
-    func centerX(margins: UIEdgeInsets) -> CGFloat {
+    public func centerX(margins: UIEdgeInsets) -> CGFloat {
         return CGRectGetMinX(self) + margins.left + ((CGRectGetWidth(self) - margins.left - margins.right) / 2.0)
     }
     
-    var width: CGFloat {
-        return CGRectGetWidth(self)
-    }
-    
-    var height: CGFloat {
-        return CGRectGetHeight(self)
-    }
-    
-    var leading: CGFloat {
+    public var leading: CGFloat {
         switch UIApplication.sharedApplication().userInterfaceLayoutDirection {
         case .LeftToRight:
-            return self.left
+            return left
         case .RightToLeft:
-            return self.right
+            return right
         }
     }
     
-    func leading(margins: UIEdgeInsets) -> CGFloat {
+    public func leading(margins: UIEdgeInsets) -> CGFloat {
         switch UIApplication.sharedApplication().userInterfaceLayoutDirection {
         case .LeftToRight:
-            return self.left(margins)
+            return left(margins)
         case .RightToLeft:
-            return self.right(margins)
+            return right(margins)
         }
     }
     
-    var trailing: CGFloat {
+    public var trailing: CGFloat {
         switch UIApplication.sharedApplication().userInterfaceLayoutDirection {
         case .LeftToRight:
-            return self.right
+            return right
         case .RightToLeft:
-            return self.left
+            return left
         }
     }
     
-    func trailing(margins: UIEdgeInsets) -> CGFloat {
+    public func trailing(margins: UIEdgeInsets) -> CGFloat {
         switch UIApplication.sharedApplication().userInterfaceLayoutDirection {
         case .LeftToRight:
-            return self.right(margins)
+            return right(margins)
         case .RightToLeft:
-            return self.left(margins)
+            return left(margins)
         }
     }
     
-    func baseline(# descender: CGFloat) -> CGFloat {
-        return round(self.bottom + descender)
+    public func baseline(# descender: CGFloat) -> CGFloat {
+        return round(bottom + descender)
     }
     
-    func baseline(# font: UIFont) -> CGFloat {
+    public func baseline(# font: UIFont) -> CGFloat {
         return baseline(descender: font.descender)
     }
     
-    func firstBaseline(# ascender: CGFloat) -> CGFloat {
-        return round(self.top + ascender)
+    public func firstBaseline(# ascender: CGFloat) -> CGFloat {
+        return round(top + ascender)
     }
     
-    func firstBaseline(# font: UIFont) -> CGFloat {
+    public func firstBaseline(# font: UIFont) -> CGFloat {
         return firstBaseline(ascender: font.ascender)
     }
     
-    func capline(# ascender: CGFloat, capHeight: CGFloat) -> CGFloat {
-        return round(self.top + (ascender - capHeight))
+    public func capline(# ascender: CGFloat, capHeight: CGFloat) -> CGFloat {
+        return round(top + (ascender - capHeight))
     }
     
-    func capline(# font: UIFont) -> CGFloat {
+    public func capline(# font: UIFont) -> CGFloat {
         return capline(ascender: font.ascender, capHeight: font.capHeight)
     }
     
-    var aspectRatio: CGFloat {
+    public var aspectRatio: CGFloat {
         return width / height
     }
     
-    var inverseAspectRatio: CGFloat {
+    public var inverseAspectRatio: CGFloat {
         return height / width
     }
 }
 
-class Layout {
+public class Layout {
     let equalTo: CGFloat
     let constant: CGFloat
     let multiplier: CGFloat
     
-    init(equalTo: CGFloat, multiplier: CGFloat, constant: CGFloat) {
+    public init(equalTo: CGFloat, multiplier: CGFloat, constant: CGFloat) {
         self.equalTo = equalTo
         self.constant = constant
         self.multiplier = multiplier
     }
     
-    convenience init(equalTo: CGFloat) {
+    public convenience init(equalTo: CGFloat) {
         self.init(equalTo: equalTo, multiplier: 1.0, constant: 0.0)
     }
 
-    convenience init(equalTo: CGFloat, constant: CGFloat) {
+    public convenience init(equalTo: CGFloat, constant: CGFloat) {
         self.init(equalTo: equalTo, multiplier: 1.0, constant: constant)
     }
     
-    var value: CGFloat {
+    public var value: CGFloat {
         return equalTo * multiplier + constant
     }
 }
 
-protocol Horizontal {
+public protocol Horizontal {
     func left(width: CGFloat) -> CGFloat
 }
 
-protocol Vertical {
+public protocol Vertical {
     func top(height: CGFloat) -> CGFloat
 }
 
-protocol Typographic {
+public protocol Typographic {
     func top(height: CGFloat, offset: CGFloat) -> CGFloat
     func offset(font: UIFont) -> CGFloat
 }
 
-protocol Size {
+public protocol Size {
     func size(sizeThatFits: (CGSize) -> CGSize) -> CGSize
 }
 
-final class Left : Layout, Horizontal {
-    func left(width: CGFloat) -> CGFloat {
+public final class Left : Layout, Horizontal {
+    public func left(width: CGFloat) -> CGFloat {
         return value
     }
 }
 
-final class Right : Layout, Horizontal {
-    func left(width: CGFloat) -> CGFloat {
+public final class Right : Layout, Horizontal {
+    public func left(width: CGFloat) -> CGFloat {
         return value - width
     }
 }
 
-final class CenterX : Layout, Horizontal {
-    func left(width: CGFloat) -> CGFloat {
+public final class CenterX : Layout, Horizontal {
+    public func left(width: CGFloat) -> CGFloat {
         return value - width / 2.0
     }
 }
 
-final class Leading : Layout, Horizontal {
-    func left(width: CGFloat) -> CGFloat {
+public final class Leading : Layout, Horizontal {
+    public func left(width: CGFloat) -> CGFloat {
         switch UIApplication.sharedApplication().userInterfaceLayoutDirection {
         case .LeftToRight:
             return value
@@ -240,7 +230,7 @@ final class Leading : Layout, Horizontal {
         }
     }
     
-    override var value: CGFloat {
+    public override var value: CGFloat {
         switch UIApplication.sharedApplication().userInterfaceLayoutDirection {
         case .LeftToRight:
             return equalTo * multiplier + constant
@@ -250,8 +240,8 @@ final class Leading : Layout, Horizontal {
     }
 }
 
-final class Trailing : Layout, Horizontal {
-    func left(width: CGFloat) -> CGFloat {
+public final class Trailing : Layout, Horizontal {
+    public func left(width: CGFloat) -> CGFloat {
         switch UIApplication.sharedApplication().userInterfaceLayoutDirection {
         case .LeftToRight:
             return value - width
@@ -260,7 +250,7 @@ final class Trailing : Layout, Horizontal {
         }
     }
     
-    override var value: CGFloat {
+    public override var value: CGFloat {
         switch UIApplication.sharedApplication().userInterfaceLayoutDirection {
         case .LeftToRight:
             return equalTo * multiplier + constant
@@ -270,72 +260,72 @@ final class Trailing : Layout, Horizontal {
     }
 }
 
-final class Top : Layout, Vertical {
-    func top(height: CGFloat) -> CGFloat {
+public final class Top : Layout, Vertical {
+    public func top(height: CGFloat) -> CGFloat {
         return value
     }
 }
 
-final class Bottom : Layout, Vertical {
-    func top(height: CGFloat) -> CGFloat {
+public final class Bottom : Layout, Vertical {
+    public func top(height: CGFloat) -> CGFloat {
         return value - height
     }
 }
 
-final class CenterY : Layout, Vertical {
-    func top(height: CGFloat) -> CGFloat {
+public final class CenterY : Layout, Vertical {
+    public func top(height: CGFloat) -> CGFloat {
         return value - height / 2.0
     }
 }
 
-final class Baseline : Layout, Typographic {
-    func top(height: CGFloat, offset: CGFloat) -> CGFloat {
+public final class Baseline : Layout, Typographic {
+    public func top(height: CGFloat, offset: CGFloat) -> CGFloat {
         return round((value - height) - offset)
     }
     
-    func offset(font: UIFont) -> CGFloat {
+    public func offset(font: UIFont) -> CGFloat {
         return font.descender
     }
 }
 
-final class FirstBaseline : Layout, Typographic {
-    func top(height: CGFloat, offset: CGFloat) -> CGFloat {
+public final class FirstBaseline : Layout, Typographic {
+    public func top(height: CGFloat, offset: CGFloat) -> CGFloat {
         return round(value - offset)
     }
     
-    func offset(font: UIFont) -> CGFloat {
+    public func offset(font: UIFont) -> CGFloat {
         return font.ascender
     }
 }
 
-final class Capline : Layout, Typographic {
-    func top(height: CGFloat, offset: CGFloat) -> CGFloat {
+public final class Capline : Layout, Typographic {
+    public func top(height: CGFloat, offset: CGFloat) -> CGFloat {
         return round(value - offset)
     }
     
-    func offset(font: UIFont) -> CGFloat {
+    public func offset(font: UIFont) -> CGFloat {
         return font.ascender - font.capHeight
     }
 }
 
-final class Width : Layout, Size {
-    func size(sizeThatFits: (CGSize) -> CGSize) -> CGSize {
+public final class Width : Layout, Size {
+    public func size(sizeThatFits: (CGSize) -> CGSize) -> CGSize {
         let width = value
         let s = sizeThatFits(CGSize.fixedWidth(width))
         return CGSize(width: width, height: s.height)
     }
 }
 
-final class Height : Layout, Size {
-    func size(sizeThatFits: (CGSize) -> CGSize) -> CGSize {
+public final class Height : Layout, Size {
+    public func size(sizeThatFits: (CGSize) -> CGSize) -> CGSize {
         let height = value
         let s = sizeThatFits(CGSize.fixedHeight(height))
         return CGSize(width: s.width, height: height)
     }
 }
 
-extension UIView {
-    final func layout(horizontal: Horizontal, _ vertical: Vertical) -> CGRect {
+public extension UIView {
+    public final func layout(horizontal: Horizontal, _ vertical: Vertical) -> CGRect {
         let s = sizeThatFits(CGSize.maximum)
         let w = s.width
         let h = s.height
@@ -344,7 +334,7 @@ extension UIView {
         return CGRect(x: l, y: t, width: w, height: h)
     }
 
-    final func layout(horizontal: Horizontal, _ vertical: Vertical, _ width: Width) -> CGRect {
+    public final func layout(horizontal: Horizontal, _ vertical: Vertical, _ width: Width) -> CGRect {
         let s = width.size(sizeThatFits)
         let w = s.width
         let h = s.height
@@ -353,7 +343,7 @@ extension UIView {
         return CGRect(x: l, y: t, width: w, height: h)
     }
     
-    final func layout(horizontal: Horizontal, _ vertical: Vertical, _ height: Height) -> CGRect {
+    public final func layout(horizontal: Horizontal, _ vertical: Vertical, _ height: Height) -> CGRect {
         let s = height.size(sizeThatFits)
         let w = s.width
         let h = s.height
@@ -362,7 +352,7 @@ extension UIView {
         return CGRect(x: l, y: t, width: w, height: h)
     }
     
-    final func layout(left: Left, _ right: Right, _ vertical: Vertical) -> CGRect {
+    public final func layout(left: Left, _ right: Right, _ vertical: Vertical) -> CGRect {
         let l = left.value
         let r = right.value
         let w = abs(r - l)
@@ -371,7 +361,7 @@ extension UIView {
         return CGRect(x: l, y: t, width: w, height: h)
     }
     
-    final func layout(leading: Leading, _ trailing: Trailing, _ vertical: Vertical) -> CGRect {
+    public final func layout(leading: Leading, _ trailing: Trailing, _ vertical: Vertical) -> CGRect {
         let l = leading.value
         let r = trailing.value
         let x0 = min(l, r)
@@ -382,7 +372,7 @@ extension UIView {
         return CGRect(x: l, y: t, width: w, height: h)
     }
     
-    final func layout(left: Left, _ right: Right, _ vertical: Vertical, _ height: Height) -> CGRect {
+    public final func layout(left: Left, _ right: Right, _ vertical: Vertical, _ height: Height) -> CGRect {
         let l = left.value
         let r = right.value
         let h = height.value
@@ -391,7 +381,7 @@ extension UIView {
         return CGRect(x: l, y: t, width: w, height: h)
     }
     
-    final func layout(leading: Leading, _ trailing: Trailing, _ vertical: Vertical, _ height: Height) -> CGRect {
+    public final func layout(leading: Leading, _ trailing: Trailing, _ vertical: Vertical, _ height: Height) -> CGRect {
         let l = leading.value
         let r = trailing.value
         let h = height.value
@@ -402,7 +392,7 @@ extension UIView {
         return CGRect(x: x0, y: t, width: w, height: h)
     }
     
-    final func layout(horizontal: Horizontal, _ vertical: Vertical, _ width: Width, _ height: Height) -> CGRect {
+    public final func layout(horizontal: Horizontal, _ vertical: Vertical, _ width: Width, _ height: Height) -> CGRect {
         let w = width.value
         let h = height.value
         let l = horizontal.left(w)
@@ -410,7 +400,7 @@ extension UIView {
         return CGRect(x: l, y: t, width: w, height: h)
     }
     
-    final func layout(left: Left, _ right: Right, _ top: Top, _ bottom: Bottom) -> CGRect {
+    public final func layout(left: Left, _ right: Right, _ top: Top, _ bottom: Bottom) -> CGRect {
         let l = left.value
         let r = right.value
         let t = top.value
@@ -421,8 +411,8 @@ extension UIView {
     }
 }
 
-extension UILabel {
-    final func layout(horizontal: Horizontal, _ typographic: Typographic) -> CGRect {
+public extension UILabel {
+    public final func layout(horizontal: Horizontal, _ typographic: Typographic) -> CGRect {
         let s = sizeThatFits(CGSize.maximum)
         let w = s.width
         let h = s.height
@@ -431,7 +421,7 @@ extension UILabel {
         return CGRect(x: l, y: t, width: w, height: h)
     }
     
-    final func layout(left: Left, _ right: Right, _ typographic: Typographic) -> CGRect {
+    public final func layout(left: Left, _ right: Right, _ typographic: Typographic) -> CGRect {
         let l = left.value
         let r = right.value
         let w = abs(r - l)
@@ -440,7 +430,7 @@ extension UILabel {
         return CGRect(x: l, y: t, width: w, height: h)
     }
     
-    final func layout(leading: Leading, _ trailing: Trailing, _ typographic: Typographic) -> CGRect {
+    public final func layout(leading: Leading, _ trailing: Trailing, _ typographic: Typographic) -> CGRect {
         let l = leading.value
         let r = trailing.value
         let x0 = min(l, r)
