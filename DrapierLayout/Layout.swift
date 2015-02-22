@@ -23,6 +23,8 @@
 // THE SOFTWARE.
 //
 
+import UIKit
+
 public let maximumLayoutValue = CGFloat(10_000.0)
 
 public extension CGSize {

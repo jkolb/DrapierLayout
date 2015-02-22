@@ -7,100 +7,100 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E59993931A033B44005FC4CF /* DrapierLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E59993921A033B44005FC4CF /* DrapierLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E59993991A033B44005FC4CF /* DrapierLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E599938D1A033B44005FC4CF /* DrapierLayout.framework */; };
-		E59993A01A033B44005FC4CF /* DrapierLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E599939F1A033B44005FC4CF /* DrapierLayoutTests.swift */; };
-		E59993AA1A033B66005FC4CF /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59993A91A033B66005FC4CF /* Layout.swift */; };
+		E5323B9B1A9A38A400571CB2 /* DrapierLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = E5323B9A1A9A38A400571CB2 /* DrapierLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5323BA11A9A38A400571CB2 /* DrapierLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5323B951A9A38A400571CB2 /* DrapierLayout.framework */; };
+		E5323BB71A9A3A6100571CB2 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5323BB61A9A3A6100571CB2 /* Layout.swift */; };
+		E5323BB91A9A3A6A00571CB2 /* DrapierLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5323BB81A9A3A6A00571CB2 /* DrapierLayoutTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E599939A1A033B44005FC4CF /* PBXContainerItemProxy */ = {
+		E5323BA21A9A38A400571CB2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E59993841A033B44005FC4CF /* Project object */;
+			containerPortal = E5323B8C1A9A38A400571CB2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E599938C1A033B44005FC4CF;
+			remoteGlobalIDString = E5323B941A9A38A400571CB2;
 			remoteInfo = DrapierLayout;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E599938D1A033B44005FC4CF /* DrapierLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DrapierLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E59993911A033B44005FC4CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E59993921A033B44005FC4CF /* DrapierLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrapierLayout.h; sourceTree = "<group>"; };
-		E59993981A033B44005FC4CF /* DrapierLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrapierLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E599939E1A033B44005FC4CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E599939F1A033B44005FC4CF /* DrapierLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrapierLayoutTests.swift; sourceTree = "<group>"; };
-		E59993A91A033B66005FC4CF /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		E5323B951A9A38A400571CB2 /* DrapierLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DrapierLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5323B991A9A38A400571CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5323B9A1A9A38A400571CB2 /* DrapierLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrapierLayout.h; sourceTree = "<group>"; };
+		E5323BA01A9A38A400571CB2 /* DrapierLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrapierLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5323BA61A9A38A400571CB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5323BB61A9A3A6100571CB2 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		E5323BB81A9A3A6A00571CB2 /* DrapierLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrapierLayoutTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E59993891A033B44005FC4CF /* Frameworks */ = {
+		E5323B911A9A38A400571CB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E59993951A033B44005FC4CF /* Frameworks */ = {
+		E5323B9D1A9A38A400571CB2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E59993991A033B44005FC4CF /* DrapierLayout.framework in Frameworks */,
+				E5323BA11A9A38A400571CB2 /* DrapierLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E59993831A033B44005FC4CF = {
+		E5323B8B1A9A38A400571CB2 = {
 			isa = PBXGroup;
 			children = (
-				E599938F1A033B44005FC4CF /* DrapierLayout */,
-				E599939C1A033B44005FC4CF /* DrapierLayoutTests */,
-				E599938E1A033B44005FC4CF /* Products */,
+				E5323B971A9A38A400571CB2 /* DrapierLayout */,
+				E5323BA41A9A38A400571CB2 /* DrapierLayoutTests */,
+				E5323B961A9A38A400571CB2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E599938E1A033B44005FC4CF /* Products */ = {
+		E5323B961A9A38A400571CB2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E599938D1A033B44005FC4CF /* DrapierLayout.framework */,
-				E59993981A033B44005FC4CF /* DrapierLayoutTests.xctest */,
+				E5323B951A9A38A400571CB2 /* DrapierLayout.framework */,
+				E5323BA01A9A38A400571CB2 /* DrapierLayoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E599938F1A033B44005FC4CF /* DrapierLayout */ = {
+		E5323B971A9A38A400571CB2 /* DrapierLayout */ = {
 			isa = PBXGroup;
 			children = (
-				E59993A91A033B66005FC4CF /* Layout.swift */,
-				E59993921A033B44005FC4CF /* DrapierLayout.h */,
-				E59993901A033B44005FC4CF /* Supporting Files */,
+				E5323BB61A9A3A6100571CB2 /* Layout.swift */,
+				E5323B9A1A9A38A400571CB2 /* DrapierLayout.h */,
+				E5323B981A9A38A400571CB2 /* Supporting Files */,
 			);
 			path = DrapierLayout;
 			sourceTree = "<group>";
 		};
-		E59993901A033B44005FC4CF /* Supporting Files */ = {
+		E5323B981A9A38A400571CB2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E59993911A033B44005FC4CF /* Info.plist */,
+				E5323B991A9A38A400571CB2 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E599939C1A033B44005FC4CF /* DrapierLayoutTests */ = {
+		E5323BA41A9A38A400571CB2 /* DrapierLayoutTests */ = {
 			isa = PBXGroup;
 			children = (
-				E599939F1A033B44005FC4CF /* DrapierLayoutTests.swift */,
-				E599939D1A033B44005FC4CF /* Supporting Files */,
+				E5323BB81A9A3A6A00571CB2 /* DrapierLayoutTests.swift */,
+				E5323BA51A9A38A400571CB2 /* Supporting Files */,
 			);
 			path = DrapierLayoutTests;
 			sourceTree = "<group>";
 		};
-		E599939D1A033B44005FC4CF /* Supporting Files */ = {
+		E5323BA51A9A38A400571CB2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E599939E1A033B44005FC4CF /* Info.plist */,
+				E5323BA61A9A38A400571CB2 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,25 +108,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		E599938A1A033B44005FC4CF /* Headers */ = {
+		E5323B921A9A38A400571CB2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E59993931A033B44005FC4CF /* DrapierLayout.h in Headers */,
+				E5323B9B1A9A38A400571CB2 /* DrapierLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		E599938C1A033B44005FC4CF /* DrapierLayout */ = {
+		E5323B941A9A38A400571CB2 /* DrapierLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E59993A31A033B44005FC4CF /* Build configuration list for PBXNativeTarget "DrapierLayout" */;
+			buildConfigurationList = E5323BAB1A9A38A400571CB2 /* Build configuration list for PBXNativeTarget "DrapierLayout" */;
 			buildPhases = (
-				E59993881A033B44005FC4CF /* Sources */,
-				E59993891A033B44005FC4CF /* Frameworks */,
-				E599938A1A033B44005FC4CF /* Headers */,
-				E599938B1A033B44005FC4CF /* Resources */,
+				E5323B901A9A38A400571CB2 /* Sources */,
+				E5323B911A9A38A400571CB2 /* Frameworks */,
+				E5323B921A9A38A400571CB2 /* Headers */,
+				E5323B931A9A38A400571CB2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -134,71 +134,71 @@
 			);
 			name = DrapierLayout;
 			productName = DrapierLayout;
-			productReference = E599938D1A033B44005FC4CF /* DrapierLayout.framework */;
+			productReference = E5323B951A9A38A400571CB2 /* DrapierLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E59993971A033B44005FC4CF /* DrapierLayoutTests */ = {
+		E5323B9F1A9A38A400571CB2 /* DrapierLayoutTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E59993A61A033B44005FC4CF /* Build configuration list for PBXNativeTarget "DrapierLayoutTests" */;
+			buildConfigurationList = E5323BAE1A9A38A400571CB2 /* Build configuration list for PBXNativeTarget "DrapierLayoutTests" */;
 			buildPhases = (
-				E59993941A033B44005FC4CF /* Sources */,
-				E59993951A033B44005FC4CF /* Frameworks */,
-				E59993961A033B44005FC4CF /* Resources */,
+				E5323B9C1A9A38A400571CB2 /* Sources */,
+				E5323B9D1A9A38A400571CB2 /* Frameworks */,
+				E5323B9E1A9A38A400571CB2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E599939B1A033B44005FC4CF /* PBXTargetDependency */,
+				E5323BA31A9A38A400571CB2 /* PBXTargetDependency */,
 			);
 			name = DrapierLayoutTests;
 			productName = DrapierLayoutTests;
-			productReference = E59993981A033B44005FC4CF /* DrapierLayoutTests.xctest */;
+			productReference = E5323BA01A9A38A400571CB2 /* DrapierLayoutTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E59993841A033B44005FC4CF /* Project object */ = {
+		E5323B8C1A9A38A400571CB2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Justin Kolb";
 				TargetAttributes = {
-					E599938C1A033B44005FC4CF = {
-						CreatedOnToolsVersion = 6.1;
+					E5323B941A9A38A400571CB2 = {
+						CreatedOnToolsVersion = 6.3;
 					};
-					E59993971A033B44005FC4CF = {
-						CreatedOnToolsVersion = 6.1;
+					E5323B9F1A9A38A400571CB2 = {
+						CreatedOnToolsVersion = 6.3;
 					};
 				};
 			};
-			buildConfigurationList = E59993871A033B44005FC4CF /* Build configuration list for PBXProject "DrapierLayout" */;
+			buildConfigurationList = E5323B8F1A9A38A400571CB2 /* Build configuration list for PBXProject "DrapierLayout" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = E59993831A033B44005FC4CF;
-			productRefGroup = E599938E1A033B44005FC4CF /* Products */;
+			mainGroup = E5323B8B1A9A38A400571CB2;
+			productRefGroup = E5323B961A9A38A400571CB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E599938C1A033B44005FC4CF /* DrapierLayout */,
-				E59993971A033B44005FC4CF /* DrapierLayoutTests */,
+				E5323B941A9A38A400571CB2 /* DrapierLayout */,
+				E5323B9F1A9A38A400571CB2 /* DrapierLayoutTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E599938B1A033B44005FC4CF /* Resources */ = {
+		E5323B931A9A38A400571CB2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E59993961A033B44005FC4CF /* Resources */ = {
+		E5323B9E1A9A38A400571CB2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,34 +208,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E59993881A033B44005FC4CF /* Sources */ = {
+		E5323B901A9A38A400571CB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E59993AA1A033B66005FC4CF /* Layout.swift in Sources */,
+				E5323BB71A9A3A6100571CB2 /* Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E59993941A033B44005FC4CF /* Sources */ = {
+		E5323B9C1A9A38A400571CB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E59993A01A033B44005FC4CF /* DrapierLayoutTests.swift in Sources */,
+				E5323BB91A9A3A6A00571CB2 /* DrapierLayoutTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E599939B1A033B44005FC4CF /* PBXTargetDependency */ = {
+		E5323BA31A9A38A400571CB2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E599938C1A033B44005FC4CF /* DrapierLayout */;
-			targetProxy = E599939A1A033B44005FC4CF /* PBXContainerItemProxy */;
+			target = E5323B941A9A38A400571CB2 /* DrapierLayout */;
+			targetProxy = E5323BA21A9A38A400571CB2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		E59993A11A033B44005FC4CF /* Debug */ = {
+		E5323BA91A9A38A400571CB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -255,6 +255,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -270,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -281,7 +282,7 @@
 			};
 			name = Debug;
 		};
-		E59993A21A033B44005FC4CF /* Release */ = {
+		E5323BAA1A9A38A400571CB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -299,8 +300,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -310,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,7 +322,7 @@
 			};
 			name = Release;
 		};
-		E59993A41A033B44005FC4CF /* Debug */ = {
+		E5323BAC1A9A38A400571CB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
@@ -335,7 +337,7 @@
 			};
 			name = Debug;
 		};
-		E59993A51A033B44005FC4CF /* Release */ = {
+		E5323BAD1A9A38A400571CB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEFINES_MODULE = YES;
@@ -350,7 +352,7 @@
 			};
 			name = Release;
 		};
-		E59993A71A033B44005FC4CF /* Debug */ = {
+		E5323BAF1A9A38A400571CB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -367,7 +369,7 @@
 			};
 			name = Debug;
 		};
-		E59993A81A033B44005FC4CF /* Release */ = {
+		E5323BB01A9A38A400571CB2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -383,32 +385,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E59993871A033B44005FC4CF /* Build configuration list for PBXProject "DrapierLayout" */ = {
+		E5323B8F1A9A38A400571CB2 /* Build configuration list for PBXProject "DrapierLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E59993A11A033B44005FC4CF /* Debug */,
-				E59993A21A033B44005FC4CF /* Release */,
+				E5323BA91A9A38A400571CB2 /* Debug */,
+				E5323BAA1A9A38A400571CB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E59993A31A033B44005FC4CF /* Build configuration list for PBXNativeTarget "DrapierLayout" */ = {
+		E5323BAB1A9A38A400571CB2 /* Build configuration list for PBXNativeTarget "DrapierLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E59993A41A033B44005FC4CF /* Debug */,
-				E59993A51A033B44005FC4CF /* Release */,
+				E5323BAC1A9A38A400571CB2 /* Debug */,
+				E5323BAD1A9A38A400571CB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		E59993A61A033B44005FC4CF /* Build configuration list for PBXNativeTarget "DrapierLayoutTests" */ = {
+		E5323BAE1A9A38A400571CB2 /* Build configuration list for PBXNativeTarget "DrapierLayoutTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E59993A71A033B44005FC4CF /* Debug */,
-				E59993A81A033B44005FC4CF /* Release */,
+				E5323BAF1A9A38A400571CB2 /* Debug */,
+				E5323BB01A9A38A400571CB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E59993841A033B44005FC4CF /* Project object */;
+	rootObject = E5323B8C1A9A38A400571CB2 /* Project object */;
 }
