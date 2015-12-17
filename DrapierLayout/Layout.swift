@@ -1,8 +1,4 @@
-//
-// Layout.swift
-// DrapierLayout
-//
-// Copyright (c) 2014 Justin Kolb - http://franticapparatus.net
+// Copyright (c) 2016 Justin Kolb - http://franticapparatus.net
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +17,6 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-//
 
 import UIKit
 
@@ -29,7 +24,7 @@ public let maximumLayoutValue = CGFloat(10_000.0)
 
 public extension CGSize {
     public func rect() -> CGRect {
-        return CGRect(origin: CGPoint.zeroPoint, size: self)
+        return CGRect(origin: CGPoint.zero, size: self)
     }
     
     public static func fixedWidth(width: CGFloat) -> CGSize {
@@ -130,27 +125,27 @@ public extension CGRect {
         }
     }
     
-    public func baseline(# descender: CGFloat) -> CGFloat {
+    public func baseline(descender descender: CGFloat) -> CGFloat {
         return round(bottom + descender)
     }
     
-    public func baseline(# font: UIFont) -> CGFloat {
+    public func baseline(font font: UIFont) -> CGFloat {
         return baseline(descender: font.descender)
     }
     
-    public func firstBaseline(# ascender: CGFloat) -> CGFloat {
+    public func firstBaseline(ascender ascender: CGFloat) -> CGFloat {
         return round(top + ascender)
     }
     
-    public func firstBaseline(# font: UIFont) -> CGFloat {
+    public func firstBaseline(font font: UIFont) -> CGFloat {
         return firstBaseline(ascender: font.ascender)
     }
     
-    public func capline(# ascender: CGFloat, capHeight: CGFloat) -> CGFloat {
+    public func capline(ascender ascender: CGFloat, capHeight: CGFloat) -> CGFloat {
         return round(top + (ascender - capHeight))
     }
     
-    public func capline(# font: UIFont) -> CGFloat {
+    public func capline(font font: UIFont) -> CGFloat {
         return capline(ascender: font.ascender, capHeight: font.capHeight)
     }
     
